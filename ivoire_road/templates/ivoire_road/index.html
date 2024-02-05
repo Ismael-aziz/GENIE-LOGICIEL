@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>IVOIRE ROAD</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'ivoire_road/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card-switch">
+            <label class="switch">
+                <input class="toggle" type="checkbox">
+                <span class="slider"></span>
+                <span class="card-side"></span>
+                <div class="flip-card__inner">
+                    <div class="flip-card__front">
+                        <div class="title">Connexion</div>
+                        <form action="" class="flip-card__form">
+                            <input type="email" placeholder="Email" name="email" class="flip-card__input">
+                            <input type="password" placeholder="Mot de passe" name="password" class="flip-card__input">
+                            <div class="additional-options">
+                                <label class="remember-me">
+                                    <input type="checkbox" name="remember"> Se souvenir de moi
+                                </label>
+                                <a href="#" class="forgot-password">Mot de passe oublié?</a>
+                            </div>
+                            <button class="flip-card__btn">Allons-y!</button>
+                        </form>
+                    </div>
+                    <div class="flip-card__back">
+                        <div class="title">Inscription</div>
+                        <form action="" class="flip-card__form">
+                            <input type="name" placeholder="Nom" class="flip-card__input">
+                            <input type="email" placeholder="Email" name="email" class="flip-card__input">
+                            <input type="password" placeholder="Mot de passe" name="password" class="flip-card__input">
+                            <input type="password" placeholder="Confirmer le mot de passe" name="password" class="flip-card__input">
+                            <div class="additional-options">
+                                <label class="remember-me">
+                                    <input type="checkbox" name="terms"> J'accepte les conditions d'utilisation
+                                </label>
+                            </div>
+                            <button class="flip-card__btn">Confirmer!</button>
+                        </form>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+</body>
+</html>
