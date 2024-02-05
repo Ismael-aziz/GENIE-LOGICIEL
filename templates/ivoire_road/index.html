@@ -1,7 +1,8 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'ivoire_road/style.css' %}">
     <script src="{% static 'ivoire_road/script.js' %}"></script>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="card-switch">
@@ -21,7 +23,8 @@
                 <div class="flip-card__inner">
                     <div class="flip-card__front">
                         <div class="title">Connexion</div>
-                        <form action="" class="flip-card__form">
+                        <form action="{% url 'chargement' %}" method="post" class="flip-card__form">
+                            {% csrf_token %}
                             <input type="email" placeholder="Email" name="email" class="flip-card__input">
                             <input type="password" placeholder="Mot de passe" name="password" class="flip-card__input">
                             <div class="additional-options">
@@ -30,7 +33,7 @@
                                 </label>
                                 <a href="#" class="forgot-password">Mot de passe oublié?</a>
                             </div>
-                            <button class="flip-card__btn">Allons-y!</button>
+                            <button type="submit" class="flip-card__btn">Allons-y!</button>
                         </form>
                     </div>
                     <div class="flip-card__back">
@@ -39,7 +42,8 @@
                             <input type="name" placeholder="Nom" class="flip-card__input">
                             <input type="email" placeholder="Email" name="email" class="flip-card__input">
                             <input type="password" placeholder="Mot de passe" name="password" class="flip-card__input">
-                            <input type="password" placeholder="Confirmer le mot de passe" name="password" class="flip-card__input">
+                            <input type="password" placeholder="Confirmer le mot de passe" name="password"
+                                class="flip-card__input">
                             <div class="additional-options">
                                 <label class="remember-me">
                                     <input type="checkbox" name="terms"> J'accepte les conditions d'utilisation
